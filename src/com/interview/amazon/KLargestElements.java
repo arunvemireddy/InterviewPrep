@@ -16,10 +16,10 @@ public class KLargestElements {
 	
 // using PriorityQueue
 	public void printKLargest1(int[] arr, int k) {	
-		
+		int[] array = Arrays.copyOf(arr, arr.length);
 		Queue<Integer> queue = new PriorityQueue<>();
 		
-		for (Integer integer : arr) {
+		for (Integer integer : array) {
 			queue.add(integer);
 			if(queue.size()>3) {
 				queue.poll();
@@ -30,7 +30,6 @@ public class KLargestElements {
 			System.out.println(queue.poll());
 		}
 	}
-	
 	
 //  using Sorting techniques
 	public void printKLargest2(int[] arr, int k) {
